@@ -9,3 +9,5 @@ The script takes one argument — the verison number of your Lambda function.
 ```
 ./lab.sh 1.0.1
 ```
+
+And when you're done with experimenting, run `./reset.sh` to destroy your S3 bucket & Terraform resources.
