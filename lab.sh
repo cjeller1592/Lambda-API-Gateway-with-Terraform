@@ -7,7 +7,7 @@ bucketstatus=$(aws s3api head-bucket --bucket "${s3_bucket}" 2>&1)
 if echo "${bucketstatus}" | grep 'Not Found';
 then
   echo "Bucket doesn't exist. Creating ..."
-  aws s3api create-bucket --bucket=$(s3_bucket) --region=us-east-1
+  aws s3api create-bucket --bucket=$s3_bucket --region=us-east-1
   echo "Done!";
 
 elif echo "${bucketstatus}" | grep 'Forbidden';
